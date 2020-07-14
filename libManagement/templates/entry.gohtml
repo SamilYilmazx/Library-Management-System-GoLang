@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Library Management System</title>
+        <meta charset="UTF-8" />
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
+        <style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #80ced6;
+}
+
+
+body {
+  font-family: 'Pacifico', cursive;
+  font-size: 17px;
+  color: black;
+  
+}
+</style>
+    </head>
+    <body>
+        <div class="navBar"> 
+            <ul>
+                <li><a href="/">Main</a></li>
+                <li><a href="/books">Books</a></li>
+                <li><a href="/entryforbooks" class="active">Entry</a></li>
+                <li style="float:right"><a href="#">About</a></li>
+            </ul>
+        </div>
+
+        <h1>Create an entry</h1>
+        
+            <form action="/gotentry" method="POST" id="info">
+                <label for="authorId">Author:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" name="author" id="authorId" placeholder="Enter the author of the book">
+                <label for="bookname">Book Title:</label>
+                <input type="text" name="nameOfBook" id="bookname" placeholder="Enter the name of the book">
+                <br/>
+                <label for="reviewId">Review:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <textarea name="reviewOfBook" rows="4" cols="100" id="reviewId" placeholder="Enter your review here..." style="width:577px;height:79px;"></textarea>
+                <br/><br/>
+                <input type="submit">
+            </form>
+            
+                
+        
+    </body>
+</html>
